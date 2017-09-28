@@ -1,0 +1,80 @@
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: .32rem;
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul, li {
+  list-style: none;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+img, div, body, html, ul, li, a {
+  -webkit-touch-callout: none;
+}
+
+input, button {
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+$num: 100%;
+@mixin nums($w:100%,$h:auto) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex($j:center) {
+  display: flex;
+  justify-content: $j;
+  align-items: center;
+}
+
+@mixin pos($p:relative) {
+  position: $p;
+}
+
+$bg: background;
+%text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%full {
+  width: $num;
+  height: $num;
+}
+
+html, body, .wrap {
+  @extend %full;
+}
+
+.wrap{
+  display:-webkit-flex;
+  -webkit-flex-direction:column;
+  overflow:hidden;
+}
+.tab{
+  @include nums($h:2rem);
+}
+.main{
+  -webkit-flex:1;
+}
