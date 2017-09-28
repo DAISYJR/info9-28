@@ -73,8 +73,51 @@ html, body, .wrap {
   overflow:hidden;
 }
 .tab{
-  @include nums($h:2rem);
+  @include nums($h:1.2rem);
+  #{$bg}:pink;
 }
-.main{
+.quan{
   -webkit-flex:1;
+  overflow-y:scroll;
+  @include nums($h:100%);
+  padding: .2rem;
+}
+.content{
+  @include nums($h:3rem);
+  border-radius:20px;
+  box-shadow: 2px 3px 2px #ccc;
+  margin-bottom:.3rem;
+    .top{
+      @include pos;
+      @include nums($h:60%);
+      border-top-left-radius:20px;
+      border-top-right-radius:20px;
+        span{
+          font-size: .42rem;
+          color:#fff;
+            b{
+              font-size:1.2rem;
+              vertical-align: top;
+            }
+        }
+        i{
+          @include pos(absolute);
+          bottom:.2rem;
+          right:.2rem;
+          color:#fff;
+          font-size:.8rem;
+        }
+    }
+    .bottom{
+      @include nums($h:40%);
+      padding:.2rem .4rem;
+      border-top:4px dotted #fff;
+        p{
+          font-size:.24rem;
+          line-height:1.7;
+        }
+        .green{
+          color:green;
+        }
+    }
 }
