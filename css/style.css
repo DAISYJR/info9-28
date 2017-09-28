@@ -38,9 +38,49 @@ html, body, .wrap {
 
 .tab {
   width: 100%;
-  height: 2rem; }
+  height: 1.2rem;
+  background: pink; }
 
-.main {
-  -webkit-flex: 1; }
+.quan {
+  -webkit-flex: 1;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding: .2rem; }
+
+.content {
+  width: 100%;
+  height: 3rem;
+  border-radius: 20px;
+  box-shadow: 2px 3px 2px #ccc;
+  margin-bottom: .3rem; }
+  .content .top {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; }
+    .content .top span {
+      font-size: .42rem;
+      color: #fff; }
+      .content .top span b {
+        font-size: 1.2rem;
+        vertical-align: top; }
+    .content .top i {
+      position: absolute;
+      bottom: .2rem;
+      right: .2rem;
+      color: #fff;
+      font-size: .8rem; }
+  .content .bottom {
+    width: 100%;
+    height: 40%;
+    padding: .2rem .4rem;
+    border-top: 4px dotted #fff; }
+    .content .bottom p {
+      font-size: .24rem;
+      line-height: 1.7; }
+    .content .bottom .green {
+      color: green; }
 
 /*# sourceMappingURL=style.css.map */
